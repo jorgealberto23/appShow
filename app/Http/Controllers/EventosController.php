@@ -35,7 +35,7 @@ class EventosController extends Controller
     }
 
     //para apagar os registros na tabela de eventos
-    public function destroy(Eventos $id){
+    public function Destroy(Eventos $id){
         $id->delete();
         return Redirect::route('home-adm');
     }
@@ -56,7 +56,7 @@ class EventosController extends Controller
 
     //para mostrar somentes os eventos por codigo
     public function MostrarEventoCodigo(Eventos $id){
-        return view("altera-evento",['registro'=>$id]);
+        return view("alteraevento",['registro'=>$id]);
     }
 
     //para buscar os eventos por nome
@@ -66,6 +66,6 @@ class EventosController extends Controller
             $query->where('nomeEvento', 'like', '%'.$valor.'%');
         });
         $todosRegistros = $registros->get();
-        return view('listaEventos',['registrosEvento'=>$todosRegistros]);
+        return view('listaeventos',['registrosEvento'=>$todosRegistros]);
     }
 }
