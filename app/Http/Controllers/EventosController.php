@@ -41,7 +41,7 @@ class EventosController extends Controller
 
     //para alterar os registros na tabela de eventos
     public function Update(Eventos $id, Request $request){
-        $registros = $request->validatee([
+        $registros = $request->validate([
             'nomeEvento'=>'string|required',
             'dataEvento'=>'date|required',
             'localEvento'=>'string|required',
