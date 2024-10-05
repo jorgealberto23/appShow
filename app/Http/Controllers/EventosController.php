@@ -55,7 +55,7 @@ class EventosController extends Controller
 
     //para mostrar somentes os eventos por codigo
     public function MostrarEventoCodigo(Eventos $id){
-        return view("alteraevento",['registro'=>$id]);
+        return view("alteraevento",['registrosEvento'=>$id]);
     }
 
     //para buscar os eventos por nome
